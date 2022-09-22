@@ -3,7 +3,7 @@ image:
   context: apache
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 8080
+  - port: 8787
     onOpen: open-preview
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
