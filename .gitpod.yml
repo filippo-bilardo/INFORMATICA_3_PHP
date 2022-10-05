@@ -9,6 +9,7 @@ ports:
 tasks:
   - name: Terminal
     command: |
+      clear
       echo "";
       echo "Commands you can try:";
       echo " * apachectl stop";
