@@ -1,11 +1,16 @@
+<!-- https://www.w3schools.com/php/php_examples.asp -->
 <!DOCTYPE HTML>  
 <html>
 <head>
+<style>
+.error {color: #FF0000;}
+</style>
 </head>
 <body>  
 
 <?php
-// define variables and set to empty values
+
+/*
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
@@ -56,6 +61,24 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+*/
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+function checkName(&$name, &$nameErr, $val) {
+  $name = trim($val);
+  $name = stripslashes($name);
+  $name = htmlspecialchars($name);
+  if(!preg_match("/^[a-zA-Z]{2,20}$/", $name)) {
+    $nameErr = "Inserire un nome valido";
+  } else
+    $nameErr = "Nome valido";
+}
+
+if (isset($_POST["submit"])) {
+  checkName($name, $nameErr, $_POST["name"]);
+}
 ?>
 
 <h2>PHP Form Validation Example</h2>
@@ -83,15 +106,15 @@ function test_input($data) {
 
 <?php
 echo "<h2>Your Input:</h2>";
-echo $name;
+echo "Nome: " . $name;
 echo "<br>";
-echo $email;
+echo "Email: " . $email;
 echo "<br>";
-echo $website;
+echo "web: " . $website;
 echo "<br>";
-echo $comment;
+echo "Comment: " . $comment;
 echo "<br>";
-echo $gender;
+echo "Gender: " . $gender;
 ?>
 
 </body>
