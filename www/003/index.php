@@ -85,23 +85,23 @@ if (isset($_POST["submit"])) {
 //!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)
 //https://github.com/davidecesarano/Validation/blob/master/Validation.php 
 //ISO date time format: Y-m-d H:i:s.
-public const DATE_TIME_ISO = '/^[\d]{4}\-[\d]{2}\-[\d]{2} [\d]{2}\:[\d]{2}\:[\d]{2}$/';
+const DATE_TIME_ISO = '/^[\d]{4}\-[\d]{2}\-[\d]{2} [\d]{2}\:[\d]{2}\:[\d]{2}$/';
 //ISO date time format: Y-m-d.
-public const DATE_ISO = '/^[\d]{4}\-[\d]{2}\-[\d]{2}$/';
+const DATE_ISO = '/^[\d]{4}\-[\d]{2}\-[\d]{2}$/';
 //Date format: d.m.Y.
-public const DATE_DMY = '/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/';
+const DATE_DMY = '/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/';
 //International phone number.
-public const PHONE_NUMBER = '/^\+[0-9]{6,}$/';
+const PHONE_NUMBER = '/^\+[0-9]{6,}$/';
 // Positive integer >= 1.
-public const ID = '/^[1-9][0-9]*$/';
+const ID = '/^[1-9][0-9]*$/';
 //Generic UUID.
-public const UUID = '/^\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$/';
+const UUID = '/^\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$/';
 //Postal code. Can start with 0. Not for canada.
-public const POSTAL_CODE = '/^[\d]{4,}$/';
+const POSTAL_CODE = '/^[\d]{4,}$/';
 //Positive float.
-public const POSITIVE_FLOAT = '/^([\d]*[.])?[\d]+$/';
+const POSITIVE_FLOAT = '/^([\d]*[.])?[\d]+$/';
   
-public $patterns = array(
+$patterns = array(
   'uri'           => '[A-Za-z0-9-\/_?&=]+',
   'url'           => '[A-Za-z0-9-:.\/_?&=#]+',
   'alpha'         => '[\p{L}]+',
