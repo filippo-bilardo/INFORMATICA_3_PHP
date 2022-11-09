@@ -1,6 +1,6 @@
 <?php
-
 /*
+https://github.com/Riculum/PHP-Validation
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
