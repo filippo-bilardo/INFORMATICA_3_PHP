@@ -1,0 +1,212 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04
+
+sudo apt install mysql-server
+
++++ /etc/apache2/apache2.conf.dpkg-new  2022-06-08 15:59:07.000000000 +0000
+@@ -1,37 +1,227 @@
+-# Apache httpd v2.4 minimal configuration
+-# see https://wiki.apache.org/httpd/Minimal_Config for documentation
++# This is the main Apache server configuration file.  It contains the
++# configuration directives that give the server its instructions.
++# See http://httpd.apache.org/docs/2.4/ for detailed information about
++# the directives and /usr/share/doc/apache2/README.Debian about Debian specific
++# hints.
++#
++#
++# Summary of how the Apache 2 configuration works in Debian:
++# The Apache 2 web server configuration in Debian is quite different to
++# upstream's suggested way to configure the web server. This is because Debian's
++# default Apache2 installation attempts to make adding and removing modules,
++# virtual hosts, and extra configuration directives as flexible as possible, in
++# order to make automating the changes and administering the server as easy as
+lines 1-18
+ possible.
++
++# It is split into several files forming the configuration hierarchy outlined
++# below, all located in the /etc/apache2/ directory:
++#
++#      /etc/apache2/
++#      |-- apache2.conf
++#      |       `--  ports.conf
++#      |-- mods-enabled
++#      |       |-- *.load
++#      |       `-- *.conf
++#      |-- conf-enabled
++#      |       `-- *.conf
++#      `-- sites-enabled
++#              `-- *.conf
++#
++#
++# * apache2.conf is the main configuration file (this file). It puts the pieces
+lines 19-36
+together by including all remaining configuration files when starting up the
++#   web server.
++#
++# * ports.conf is always included from the main configuration file. It is
++#   supposed to determine listening ports for incoming connections which can be
++#   customized anytime.
++#
++# * Configuration files in the mods-enabled/, conf-enabled/ and sites-enabled/
++#   directories contain particular configuration snippets which manage modules,
++#   global configuration fragments, or virtual host configurations,
++#   respectively.
++#
++#   They are activated by symlinking available configuration files from their
++#   respective *-available/ counterparts. These should be managed by using our
++#   helpers a2enmod/a2dismod, a2ensite/a2dissite and a2enconf/a2disconf. See
++#   their respective man pages for detailed information.
++#
++# * The binary is called apache2. Due to the use of environment variables, in
+lines 37-54
++#   the default configuration, apache2 needs to be started/stopped with
++#   /etc/init.d/apache2 or apache2ctl. Calling /usr/bin/apache2 directly will not
++#   work with the default configuration.
++
++
++# Global configuration
++#
++
++#
++# ServerRoot: The top of the directory tree under which the server's
++# configuration, error, and log files are kept.
++#
++# NOTE!  If you intend to place this on an NFS (or otherwise network)
++# mounted filesystem then please read the Mutex documentation (available
++# at <URL:http://httpd.apache.org/docs/2.4/mod/core.html#mutex>);
++# you will save yourself a lot of trouble.
++#
++# Do NOT add a slash at the end of the directory path.
+lines 55-72
++#
++#ServerRoot "/etc/apache2"
++
++#
++# The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
++#
++#Mutex file:${APACHE_LOCK_DIR} default
++
++#
++# The directory where shm and other runtime files will be stored.
++#
++
++DefaultRuntimeDir ${APACHE_RUN_DIR}
++
++#
++# PidFile: The file in which the server should record its process
++# identification number when it starts.
++# This needs to be set in /etc/apache2/envvars
+lines 73-90
++#
++PidFile ${APACHE_PID_FILE}
+ 
+-ServerRoot ${GITPOD_REPO_ROOT}
++#
++# Timeout: The number of seconds before receives and sends time out.
++#
++Timeout 300
++
++#
++# KeepAlive: Whether or not to allow persistent connections (more than
++# one request per connection). Set to "Off" to deactivate.
++#
++KeepAlive On
++
++#
++# MaxKeepAliveRequests: The maximum number of requests to allow
++# during a persistent connection. Set to 0 to allow an unlimited amount.
+lines 91-108
++# We recommend you leave this number high, for maximum performance.
++#
++MaxKeepAliveRequests 100
++
++#
++# KeepAliveTimeout: Number of seconds to wait for the next request from the
++# same client on the same connection.
++#
++KeepAliveTimeout 5
+ 
+-PidFile ${APACHE_PID_FILE}
++
++# These need to be set in /etc/apache2/envvars
+ User ${APACHE_RUN_USER}
+ Group ${APACHE_RUN_GROUP}
+ 
+-# Modules as installed/activated via apt-get
+-IncludeOptional /etc/apache2/mods-enabled/*.load
+lines 109-126
+-IncludeOptional /etc/apache2/mods-enabled/*.conf
+-
+-# Configure hostname and port for server
+-ServerName ${APACHE_SERVER_NAME}
+-Listen *:8787
+-
+-# Configure Logging
+-LogFormat "%h %l %u %t \"%r\" %>s %b" common
+-CustomLog ${APACHE_LOG_DIR}/access.log common
++#
++# HostnameLookups: Log the names of clients or just their IP addresses
++# e.g., www.apache.org (on) or 204.62.129.132 (off).
++# The default is off because it'd be overall better for the net if people
++# had to knowingly turn this feature on, since enabling it means that
++# each client request will result in AT LEAST one lookup request to the
++# nameserver.
++#
++HostnameLookups Off
+lines 127-144
++
++# ErrorLog: The location of the error log file.
++# If you do not specify an ErrorLog directive within a <VirtualHost>
++# container, error messages relating to that virtual host will be
++# logged here.  If you *do* define an error logfile for a <VirtualHost>
++# container, that host's errors will be logged there and not here.
++#
+ ErrorLog ${APACHE_LOG_DIR}/error.log
+ 
+-# Never change this block
++#
++# LogLevel: Control the severity of messages logged to the error_log.
++# Available values: trace8, ..., trace1, debug, info, notice, warn,
++# error, crit, alert, emerg.
++# It is also possible to configure the log level for particular modules, e.g.
++# "LogLevel info ssl:warn"
++#
++LogLevel warn
+lines 145-162
++
++# Include module configuration:
++IncludeOptional mods-enabled/*.load
++IncludeOptional mods-enabled/*.conf
++
++# Include list of ports to listen on
++Include ports.conf
++
++
++# Sets the default security model of the Apache2 HTTPD server. It does
++# not allow access to the root filesystem outside of /usr/share and /var/www.
++# The former is used by web applications packaged in Debian,
++# the latter may be used for local directories served by the web server. If
++# your system is serving content from a sub-directory in /srv you must allow
++# access here, or in any related virtual host.
+ <Directory />
+-    AllowOverride None
+-    Require all denied
+lines 163-180
++       Options FollowSymLinks
++       AllowOverride None
++       Require all denied
+ </Directory>
+ 
+-# Direcrory and files to be served
+-DirectoryIndex index.html
+-DocumentRoot "${GITPOD_REPO_ROOT}/www"
+-<Directory "${GITPOD_REPO_ROOT}/www">
+-    Require all granted
++<Directory /usr/share>
++       AllowOverride None
++       Require all granted
+ </Directory>
+ 
+-# Include conf installed via apt-get
+-IncludeOptional /etc/apache2/conf-enabled/*.conf
++<Directory /var/www/>
+lines 181-198
