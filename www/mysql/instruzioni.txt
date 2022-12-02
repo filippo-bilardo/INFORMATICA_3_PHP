@@ -1,6 +1,8 @@
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04
 
 sudo apt install mysql-server
+mysql -e "show databases;"
+
 
 +++ /etc/apache2/apache2.conf.dpkg-new  2022-06-08 15:59:07.000000000 +0000
 @@ -1,37 +1,227 @@

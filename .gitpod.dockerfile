@@ -1,4 +1,5 @@
-FROM gitpod/workspace-full:latest
+#FROM gitpod/workspace-full:latest
+FROM gitpod/workspace-mysql
 
 # optional: use a custom apache config.
 COPY etc/apache2/apache2.conf /etc/apache2/apache2.conf
