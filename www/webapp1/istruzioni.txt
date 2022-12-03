@@ -1,0 +1,14 @@
+CREATE DATABASE WEB_APP1;
+SHOW DATABASES;
+USE WEB_APP1;
+
+CREATE USER 'web_user'@'localhost' IDENTIFIED BY 'eKcGZr59zAa2BEWU';
+GRANT SELECT, INSERT, UPDATE ON 'WEB_APP1'.* TO 'web_user'@'localhost';
+
+CREATE TABLE utente (id INT NOT NULL AUTO_INCREMENT, username VARCHAR( 64 ) NOT NULL, password VARCHAR( 64 ) NOT NULL, PRIMARY KEY (id));
+SHOW TABLES;
+DESC utente;
+
+INSERT INTO utente (id, username, password) VALUES (NULL, 'utente', 'prova');
+INSERT INTO utente (id, username, password) VALUES (NULL, 'sec_user', 'FFcGZr59zAa2BEWU');
+SELECT * FROM utente;
