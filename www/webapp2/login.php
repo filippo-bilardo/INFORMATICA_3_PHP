@@ -19,7 +19,7 @@ $_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
 $email = (isset($_POST['email'])) ? $_POST['email'] : null;
 $password = (isset($_POST['password'])) ? $_POST['password'] : null;
 echo "-".$email."-".$password."-"; //TODO: debug only
-list($retval,$errmsg)=login_simple($email, $password);
+list($retval,$errmsg)=login($email, $password);
 if($retval) {header("location: index.php"); die();} 
 ?>
  

@@ -1,8 +1,8 @@
 <?php
 /** ****************************************************************************************
-* \mainpage WEBAPP1
+* \mainpage WEBAPP2
 *
-* @brief Gestire le sessioni nelle applicazioni web
+* @brief Gestire le sessioni nelle applicazioni web utilizzando la connessione al DB
 * <specifiche del progetto>
 * <specifiche del collaudo>
 * 
@@ -18,12 +18,12 @@
   <title>Benvenuto</title>
 </head>
 <body>
-  <h1>WEBAPP1</h1>
-  <h2>Gestire le sessioni nelle applicazioni web</h2>
+  <h1>WEBAPP2</h1>
+  <h2>Gestire le sessioni nelle applicazioni web. Utilizzo di MySql per l'autenticazione</h2>
   <p>
-    <a href="riservata.php" class="btn btn-warning">Vai all'area riservata del sito</a>
+    <a href="riservata.php">Vai all'area riservata del sito</a>
     <br/>
-    <a href="logout.php" class="btn btn-danger">Login</a>
+    <a href="login.php">Login</a>
   </p>
 </body>
 </html>
