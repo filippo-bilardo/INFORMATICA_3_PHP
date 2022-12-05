@@ -92,8 +92,31 @@ function register($email, $username, $password, $cpassword) {
     return array(false, "Attenzione! Errore: " . $e->getMessage());
   }  
 }
-
 function login($email, $password) {
+  
+  if(! isset($email, $password)) 
+    return array(false, "Inserire le proprie credenziali e premere il pulsante login.");
+    
+  if(empty($email) || empty($password)) 
+    return array(false, "Inserire le proprie credenziali non nulle e premere il pulsante login.");
+
+  if($email=="admin" && $password="pwd") {
+    // Password corretta! Login eseguito con successo.
+    $_SESSION['userid'] = $email; 
+    $_SESSION['username'] = $email;
+    return array(true, "Login eseguito correttamente");
+  } else {
+    // Password sbagliata.
+    $_SESSION['userid'] = null;
+    return array(false, "Attenzione! Password sbagliata.");
+  }
+    /*
+      // L'utente inserito non esiste.
+      $_SESSION['userid'] = null;
+      return array(false, "Attenzione! L'utente inserito non esiste.");
+    */ 
+}
+function loginDB($email, $password) {
   
   if(! isset($email, $password)) 
     return array(false, "Inserire le proprie credenziali e premere il pulsante login.");
