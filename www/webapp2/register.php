@@ -1,13 +1,25 @@
 <?php
+/** ****************************************************************************************
+* @file register.php
+* @brief Aggiunta utente al DB e accesso alla sezione riservata del sito
+* <specifiche del progetto>
+* <specifiche del collaudo>
+* 
+* @author Filippo Bilardo
+* @date 05/12/2022
+* @version 1.0 20/03/2018 Versione iniziale
+* @version 1.1 05/12/2022 Riorganizzazione del codice
+*/
+
 include 'functions.php';
 
-sec_session_start(); // usiamo la nostra funzione per avviare una sessione php sicura
+session_start(); // usiamo la nostra funzione per avviare una sessione php sicura
 $_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
 
-$email = (isset($_POST['email'])) ? $_POST['email'] : "";
-$username = (isset($_POST['username'])) ? $_POST['username'] : "";
-$crypt_pwd = (isset($_POST['crypt_pwd'])) ? $_POST['crypt_pwd'] : "";
-$crypt_cpwd = (isset($_POST['crypt_cpwd'])) ? $_POST['crypt_cpwd'] : "";
+$email = (isset($_POST['email'])) ? $_POST['email'] : null;
+$username = (isset($_POST['username'])) ? $_POST['username'] : null;
+$crypt_pwd = (isset($_POST['crypt_pwd'])) ? $_POST['crypt_pwd'] : null;
+$crypt_cpwd = (isset($_POST['crypt_cpwd'])) ? $_POST['crypt_cpwd'] : null;
 
 list($retval,$errmsg)=register($email, $username, $crypt_pwd, $crypt_cpwd);
 if($retval) {header("location: welcome.php"); die();}  
@@ -23,14 +35,15 @@ if($retval) {header("location: welcome.php"); die();}
     form.myform {display: table;}
     div.myform {display: table-row; margin-bottom: 2px;}
     label, input {display: table-cell; margin-bottom: 10px;}
+    .err {color: #FF0000;}
   </style>
 </head>
 <body>
   <div align="center">
     <h3>Registrazione</h3>
     <br />
-    <p><?=$errmsg?></p>
     <form action="register.php" class="myform" method="post">
+      <span class="err"><?=$errmsg?></span><br />
       <div class="myform"><label>Email <input type="text" name="email" value="<?=$email?>" /></label></div>
       <div class="myform"><label>Username <input type="text" name="username" value="<?=$username?>" /></label></div>
       <div class="myform"><label>Password <input type="password" name="password" value="" /></label></div>

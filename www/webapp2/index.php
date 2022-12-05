@@ -23,7 +23,7 @@
   <p>
     <a href="riservata.php" class="btn btn-warning">Vai all'area riservata del sito</a>
     <br/>
-    <a href="login.php" class="btn btn-danger">Login</a>
+    <a href="logout.php" class="btn btn-danger">Login</a>
   </p>
 </body>
 </html>

@@ -19,7 +19,7 @@ $_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
 $email = (isset($_POST['email'])) ? $_POST['email'] : null;
 $password = (isset($_POST['password'])) ? $_POST['password'] : null;
 echo "-".$email."-".$password."-"; //TODO: debug only
-list($retval,$errmsg)=login_locale($email, $password);
+list($retval,$errmsg)=login_simple($email, $password);
 if($retval) {header("location: index.php"); die();} 
 ?>
  
@@ -41,7 +41,7 @@ if($retval) {header("location: index.php"); die();}
     <input type="submit" value="Login" />
     <input type="reset" value="Cancel" />
   </form>
-  <p>Non hai un account? <a href="">Registrati adesso</a>.</p>        
+  <p>Non hai un account? <a href="register.php">Registrati adesso</a>.</p>        
   <a href="index.php">Torna alla home page</a>        
 </body>
 </html>
