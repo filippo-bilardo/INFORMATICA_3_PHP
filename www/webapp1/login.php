@@ -12,16 +12,21 @@
 */
 include 'functions.php';
 
+$errmsg="";
+
 session_start(); // Avvia la sessione php.
 if(isset($_SESSION['pag_count'])) {
   $_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
 }
 
-$email = (isset($_POST['email'])) ? $_POST['email'] : null;
-$password = (isset($_POST['password'])) ? $_POST['password'] : null;
-echo "-".$email."-".$password."-"; //TODO: debug only
-list($retval,$errmsg)=login_locale($email, $password);
-if($retval) {header("location: index.php"); die();} 
+if(isset($_POST['submit'])) {
+  $email = (isset($_POST['email'])) ? $_POST['email'] : null;
+  $password = (isset($_POST['password'])) ? $_POST['password'] : null;
+  echo "-".$email."-".$password."-"; //TODO: debug only
+  
+  list($retval,$errmsg)=login_locale($email, $password);
+  if($retval) {header("location: index.php"); die();}
+}
 ?>
  
 <!DOCTYPE html>
@@ -39,7 +44,7 @@ if($retval) {header("location: index.php"); die();}
     <span class="err"><?=$errmsg?></span><br />
     <label>Email <input type="text" name="email" /></label><br />
     <label>Password <input type="password" name="password"/></label><br />
-    <input type="submit" value="Login" />
+    <input name="submit" type="submit" value="Login" />
     <input type="reset" value="Cancel" />
   </form>
   <p>Non hai un account? <a href="">Registrati adesso</a>.</p>        
