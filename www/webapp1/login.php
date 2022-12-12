@@ -10,11 +10,12 @@
 * @version 1.0 20/03/2018 Versione iniziale
 * @version 1.1 05/12/2022 Riorganizzazione del codice
 */
-
 include 'functions.php';
 
 session_start(); // Avvia la sessione php.
-$_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
+if(isset($_SESSION['pag_count'])) {
+  $_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
+}
 
 $email = (isset($_POST['email'])) ? $_POST['email'] : null;
 $password = (isset($_POST['password'])) ? $_POST['password'] : null;
