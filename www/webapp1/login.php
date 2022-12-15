@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
   echo "-".$email."-".$password."-"; //TODO: debug only
   
   list($retval,$errmsg)=login_locale($email, $password);
-  if($retval) {header("location: index.php"); die();}
+  if($retval) {header("location: riservata.php"); die();}
 }
 ?>
  
@@ -42,8 +42,8 @@ if(isset($_POST['submit'])) {
   
   <form action="login.php" method="post">
     <span class="err"><?=$errmsg?></span><br />
-    <label>Email <input type="text" name="email" /></label><br />
-    <label>Password <input type="password" name="password"/></label><br />
+    <label>Email <input type="text" name="email" value="<?=$email?>" /></label><br />
+    <label>Password <input type="password" name="password" value="<?=$password?>" /></label><br />
     <input name="submit" type="submit" value="Login" />
     <input type="reset" value="Cancel" />
   </form>

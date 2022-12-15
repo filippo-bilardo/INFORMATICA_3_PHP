@@ -1,9 +1,20 @@
 <?php
-//TODO intestazione
-include 'functions.php';
+/** ****************************************************************************************
+* @file riservata.php
+* @brief Pagina riservata del sito
+* <specifiche del progetto>
+* <specifiche del collaudo>
+* 
+* @author Filippo Bilardo
+* @date 05/12/2022
+* @version 1.0 20/03/2018 Versione iniziale
+* @version 1.1 05/12/2022 Riorganizzazione del codice
+*/include 'functions.php';
 
 session_start(); // Avvia la sessione php.
-$_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
+if(isset($_SESSION['pag_count'])) {
+  $_SESSION['pag_count']++; echo $_SESSION['pag_count']; //TODO: debug only
+}
 
 // Check if the user is logged in, if not then redirect to login page
 list($retval,$errmsg)=login_check();

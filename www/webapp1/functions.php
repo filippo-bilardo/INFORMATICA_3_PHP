@@ -19,7 +19,7 @@ function login_locale($email, $password) {
   if(empty($email) || empty($password)) 
     return array(false, "Inserire le proprie credenziali non nulle e premere il pulsante login.");
 
-  if($email=="admin" && $password="pwd") {
+  if($email=="m.rossi@email.it" && $password=="pwd") {
     // Password corretta! Login eseguito con successo.
     $_SESSION['username'] = $email;
     return array(true, "Login eseguito correttamente");
@@ -31,7 +31,8 @@ function login_locale($email, $password) {
 }
 function login_check() {
   // Verifica che tutte le variabili di sessione siano impostate correttamente
-  if(isset($_SESSION['username'])) {
+  if( isset($_SESSION['username']) && empty($_SESSION['username']) ) {
+
     return array(true, "L'utente ".$_SESSION['username'].", ha gia' effettuato il login.");
   } else {
     return array(false, "E' necessario eseguire il login.");

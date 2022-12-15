@@ -7,7 +7,7 @@ https://codecurated.com/blog/how-to-better-store-password-in-database/
 # Creazione del database WEB_APP2
 CREATE DATABASE WEB_APP2;
 SHOW DATABASES;
-USE WEB_APP2;
+USE WEB_APP2;    
 
 # Creazione dell’utente web_user
 CREATE USER 'web_user'@'localhost' IDENTIFIED BY 'eKcGZr59zAa2BEWU';
