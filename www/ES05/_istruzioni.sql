@@ -1,8 +1,8 @@
-https://docs.google.com/presentation/d/1wSSlHAm7urCmYDmHlTgmtNnqnApGIQXuzJjI2vuQm4o/edit#slide=id.g4c639a00cd_0_292
-https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
-https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
-https://blog.bit4id.com/archiviazione-sicura-delle-password-hash-salt-e-funzioni-di-derivazione-parte-1/
-https://codecurated.com/blog/how-to-better-store-password-in-database/ 
+# https://docs.google.com/presentation/d/1wSSlHAm7urCmYDmHlTgmtNnqnApGIQXuzJjI2vuQm4o/edit#slide=id.g4c639a00cd_0_292
+# https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
+# https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+# https://blog.bit4id.com/archiviazione-sicura-delle-password-hash-salt-e-funzioni-di-derivazione-parte-1/
+# https://codecurated.com/blog/how-to-better-store-password-in-database/ 
 
 # Creazione del database WEB_APP2
 CREATE DATABASE WEB_APP2;
@@ -22,9 +22,10 @@ CREATE TABLE utente (username VARCHAR( 64 ) NOT NULL, password VARCHAR( 64 ) NOT
 SHOW TABLES;
 DESC utente;
 
-INSERT INTO utente (username, password) VALUES ('mrossi', 'prova');
-INSERT INTO utente (username, password) VALUES ('sec_user', 'FFcGZr59zAa2BEWU');
-INSERT INTO utente (username, password) VALUES ('admin', 'pwd');
+INSERT INTO utente (username, password) VALUES ('mrossi', 'prova'),
+('sec_user', 'FFcGZr59zAa2BEWU'), 
+('admin', 'pwd');
+
 SELECT * FROM utente;
 
 
