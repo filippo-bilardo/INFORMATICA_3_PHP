@@ -4,6 +4,7 @@
 # https://blog.bit4id.com/archiviazione-sicura-delle-password-hash-salt-e-funzioni-di-derivazione-parte-1/
 # https://codecurated.com/blog/how-to-better-store-password-in-database/ 
 
+
 # Creazione del database WEB_APP2
 CREATE DATABASE WEB_APP2;
 SHOW DATABASES;
