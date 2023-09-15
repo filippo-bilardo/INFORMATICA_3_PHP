@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Tavola pitagorica php</title>
+    <title>Hello php</title>
 </head>
 <body>
 
