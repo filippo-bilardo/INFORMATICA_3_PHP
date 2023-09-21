@@ -13,5 +13,21 @@ $nullValue = null;
 $variableThatsNotSet;
 $aLargeArray = array_fill(0, 100, 'test');
 $arrayWithSpaceKey = array('space key' => 1);
-echo "Helloooo";
+
+
+echo "Helloooo<br>";
+echo $aFloat + $anInt;
+echo "<br>"; $a="10"; $b=20; echo $a . $b;
+echo "<br>"; $c="Ciao"; $d=20; echo $c . $d;
+echo "<br>";
+echo "risultato = " . $aFloat . $anInt;
+echo "<br>";
+echo "<br>";
+echo "<br>";
+$nome="Mario";
+$cogn="Rossi";
+echo "Cioa $nome       $cogn";
+echo "<br>";
+echo 'Cioa $nome       $cogn';
+
 exit;
