@@ -21,6 +21,17 @@ var_dump($aLargeArray);
 echo "<br>";
 echo "<br>";
 
+$studenti = [
+    ["nome" => "Mario", "voto" => 8],
+    ["nome" => "Luigi", "voto" => 9],
+    ["nome" => "Peach", "voto" => 10]
+];
+foreach ($studenti as $record) {
+    foreach ($record as $nome => $valore) {
+        echo "\$nome=$nome , \$valore=$valore<br/>\n";
+    }
+    echo "\n";
+}
 
 exit;
 ?>

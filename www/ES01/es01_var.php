@@ -9,6 +9,8 @@ $aVeryLongString = str_repeat('lol', 1000);
 $aBoolean = true;
 $nullValue = null;
 $variableThatsNotSet;
+$miavar; $_ENV; $var34;
+
 
 echo "<h1>Helloooo! Prove con variabili e costanti</h1><br>";
 echo "define('TEST_CONSTANT', 123) -> " . TEST_CONSTANT . "<br><br>";
