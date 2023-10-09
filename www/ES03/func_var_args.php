@@ -22,4 +22,9 @@ function miaFunzione2(...$argomenti) {
 }
 
 miaFunzione2(99, 2, "Ciao");
+
+function average(){
+    return array_sum(func_get_args())/func_num_args();
+}
+echo "<br>" . average(10, 15, 20, 25); // 17.5
 ?>
