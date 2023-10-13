@@ -1,5 +1,6 @@
 <?php
 
+echo "<h1>Lavorare con gli array</h1><br>";
 echo "<h1>Helloooo! Prove con array</h1><br>";
 
 $anArray = array(99, 'nome' => "Mario", 'subArr' => ['t' => 876]);
