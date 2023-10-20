@@ -1,6 +1,4 @@
 <?php
-//Code from https://chat.openai.com/chat
-
 // Recupera i dati del form di login
 $username = $_POST['username'];
 $password = $_POST['password'];

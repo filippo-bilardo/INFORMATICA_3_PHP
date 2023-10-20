@@ -1,11 +1,5 @@
 <!-- http://204.216.213.176/inf3php/ES03/es_heredoc2.php -->
 <?php
-$stringa = <<<TESTO
-I dati inseriti nel form sono: <br/>
-Nome e Cognome: $nome $cognome <br/>
-Email: $email
-TESTO;
-
 $form = <<<FORM
   <form method="post">
     <label for="nome">Nome:</label><input type="text" id="nome" name="nome"><br>
@@ -19,6 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $nome = $_POST['nome'];
   $cognome = $_POST['cognome'];
   $email = $_POST['email'];
+  $stringa = <<<TESTO
+  I dati inseriti nel form sono: <br/>
+  Nome e Cognome: $nome $cognome <br/>
+  Email: $email
+  TESTO;  
   echo $stringa;
 } else {
   echo $form;
