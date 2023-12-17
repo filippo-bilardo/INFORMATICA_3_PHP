@@ -69,3 +69,55 @@ INSERT INTO Prestiti (IDPrestito, ISBNLibro, IDUtente, DataPrestito, DataScadenz
 (5, '9788804645238', 1, '2023-03-18', '2023-04-02'),
 (6, '9788806180825', 3, '2023-03-22', '2023-04-06');
 
+-- Creazione della tabella "Autori"
+CREATE TABLE IF NOT EXISTS Autori (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(50),
+    Nazionalita VARCHAR(50),
+    Nascita DATE,
+    Morte DATE
+);
+
+-- Inserimento di dati nella tabella "Autori"
+INSERT INTO Autori (Nome, Nazionalita, Nascita, Morte) VALUES
+('J.R.R. Tolkien', 'Inglese', '1892-01-03', '1973-09-02'),
+('Dan Brown', 'Americano', '1964-06-22', NULL),
+('George Orwell', 'Inglese', '1903-06-25', '1950-01-21'),
+('C.S. Lewis', 'Irlandese', '1898-11-29', '1963-11-22'),
+('J.K. Rowling', 'Inglese', '1965-07-31', NULL),
+('George R.R. Martin', 'Americano', '1948-09-20', NULL),
+('Frank Herbert', 'Americano', '1920-10-08', '1986-02-11'),
+('Haruki Murakami', 'Giapponese', '1949-01-12', NULL);
+
+-- Aggiornamento della tabella "Libri" per utilizzare l'ID dell'autore
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'J.R.R. Tolkien')
+WHERE Autore = 'J.R.R. Tolkien';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'Dan Brown')
+WHERE Autore = 'Dan Brown';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'George Orwell')
+WHERE Autore = 'George Orwell';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'C.S. Lewis')
+WHERE Autore = 'C.S. Lewis';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'J.K. Rowling')
+WHERE Autore = 'J.K. Rowling';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'George R.R. Martin')
+WHERE Autore = 'George R.R. Martin';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'Frank Herbert')
+WHERE Autore = 'Frank Herbert';
+
+UPDATE Libri
+SET Autore = (SELECT ID FROM Autori WHERE Nome = 'Haruki Murakami')
+WHERE Autore = 'Haruki Murakami';
