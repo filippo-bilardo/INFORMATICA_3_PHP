@@ -2,16 +2,28 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Hello JS</title>
+    <title>JS Selector</title>
 </head>
 <body>
-    <h1>Hello JS</h1>
-    <p>Apri la console (CTRL+SHIFT+I) per vedere l'output dello script</p>
+    <h1>JS Selector</h1>
+    <p id="p1">Apri la console (CTRL+SHIFT+I) per vedere l'output dello script</p>
 
+    <p class="rosso">Rosso</p>
+    <p class="rosso">Rosso</p>
+    <p class="rosso">Rosso</p>
+    <p class="verde">Verde</p>
+    <p class="verde">Verde</p>
+    <p class="verde">Verde</p>
+    <p class="rosso">Rosso</p>
+    
     <script>
-        const elemento = document.getElementById("p");
+        const elemento = document.getElementById("p1");
         console.log(elemento.textContent);
-        console.log("Hello JS\n\n");console.log("Hello JS\n\n");
+
+        const elementi = document.getElementsByClassName("rosso");
+        for (let i = 0; i < elementi.length; i++) {
+            elementi[i].style.color = "red";
+        }
     </script>
     </body>
 </html>  
