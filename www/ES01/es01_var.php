@@ -1,3 +1,6 @@
+<!--
+  http://204.216.213.176/inf3php/ES01/es01_var.php
+-->
 <?php
 
 define('TEST_CONSTANT', 123);
