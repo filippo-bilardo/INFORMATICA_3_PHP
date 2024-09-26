@@ -7,7 +7,7 @@
 <body>
   <h3>Accesso a pagina riservata</h3>
   
-  <form action="login.php" method="post">
+  <form action="login_get.php" method="get">
     
     <label for="username"><b>Username</b></label>
     <input type="text" name="nomeutente" /><br />

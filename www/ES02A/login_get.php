@@ -1,7 +1,7 @@
 <!-- http://204.216.213.176/inf3php/ES02A/ -->
 <?php
-$username = $_POST['nomeutente'];
-$passwd = $_POST['password'];
+$username = $_GET['nomeutente'];
+$passwd = $_GET['password'];
 
 
 if($username=="Mario" && $passwd=="123") {
