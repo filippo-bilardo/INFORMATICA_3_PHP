@@ -9,11 +9,12 @@
   
   <form action="login.php" method="post">
     
-    <label for="username" ><b>Username</b></label>
-    <input type="text" name="nomeutente" placeholder="Inserisci il nome utente" /><br />
+    <label for="username"><b>Username</b></label>
+    <input type="text" name="nomeutente" value="Cognome" /><br />
+    <input type="text" name="nomeutente1" placeholder="Inserisci il cognome"/><br />
 
     <label for="password"><b>Password</b></label>
-    <input type="password" name="password" placeholder="Inserisci la password" /><br />
+    <input type="password" name="password" /><br />
     
     <input name="submit" type="submit" value="Invia" />
   

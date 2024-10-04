@@ -1,8 +1,12 @@
 <!-- http://204.216.213.176/inf3php/ES02A/ -->
 <?php
-$username = $_POST['nomeutente'];
-$passwd = $_POST['password'];
+//$username = $_POST['nomeutente'];
+//$passwd = $_POST['password'];
+$username = $_REQUEST['nomeutente'];
+$passwd = $_REQUEST['password'];
 
+echo "Username: $username<br />";
+echo "Password: $passwd<br />";
 
 if($username=="Mario" && $passwd=="123") {
   $msg = "Attenzione credenziali non corrette";
