@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     Nome e Cognome: $nome $cognome <br/>
     Email: $email
   TESTO;
-  echo $stringa;
+  $html = $stringa;
 } else {
   $form = <<<FORM
     <form method="post">
@@ -19,6 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <input type="submit" value="Invia">
     </form>
   FORM;
-  echo $form;
+  $html = $form;
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>es_heredoc</title>
+</head>
+<body>
+  <?=$html ?>
+</body>
+</html>

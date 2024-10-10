@@ -1,7 +1,11 @@
-<!-- http://204.216.213.176/inf3php/ES03/es_heredoc2.php -->
+<!-- http://204.216.213.176/inf3php/ES03/es_postback1.php -->
 <?php
 
-echo $_SERVER['REQUEST_METHOD'] . "<br>";
+//Stampiamo tutte le chiavi dell'array $_POST 
+// e anche il valore associato a ciascuna chiave
+foreach ($_POST as $key => $value) {
+  echo "Chiave: $key, Valore: $value <br>";
+}
 
 $form = <<<FORM
   <form method="post">
@@ -12,7 +16,7 @@ $form = <<<FORM
   </form>
 FORM;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['nome'])) {
   $nome = $_POST['nome'];
   $cognome = $_POST['cognome'];
   $email = $_POST['email'];

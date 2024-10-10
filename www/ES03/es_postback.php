@@ -1,7 +1,14 @@
-<!-- http://204.216.213.176/inf3php/ES03/es_heredoc2.php -->
+<!-- http://204.216.213.176/inf3php/ES03/es_postback.php -->
 <?php
 
+$nome = $_POST['nome'];
+$cognome = $_POST['cognome'];
+$retval = isset($_POST['nome']);
+echo "retval: " . (string)$retval . "<br>";
+
 echo $_SERVER['REQUEST_METHOD'] . "<br>";
+echo "Nome: " . $nome . "Cognome: " . $cognome . "<br>";
+
 
 $form = <<<FORM
   <form method="post">
