@@ -4,7 +4,8 @@
     - 2.3 Variabili e costanti
     - Operatori e controllo di flusso
     - 2.4 - Variabili predefinite
-    - 2.5 - Applicazione PHP: Pagine Separate o Singola Pagina con Postback
+   - 2.5 - Applicazione PHP: Pagine Separate o Singola Pagina con Postback
+- [Array associativi](<Array associativi.md>)
 
 ---
 [INDICE](../README.md)
