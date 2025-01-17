@@ -1,5 +1,6 @@
 ## Guide varie
 
+- Vedi TPSIT2
 - [Ciclo di sviluppo software](<Ciclo di sviluppo software.md>)
 - [Documentazione usando il formato Markdown](<Documentazione usando il formato Markdown.md>)
 - [Lavoro di Gruppo con GitHub e VSCode](<Lavoro di Gruppo con GitHub e VSCode.md>)
