@@ -1,10 +1,10 @@
 ## 4. **Persistenza dei Dati e Sessioni**
 
 ### Esercitazioni
- - [ES04 - Gestione delle sessioni nelle applicazioni web](<https://docs.google.com/presentation/d/1LTdLkmBd0KBnZE7xzD7ZFkRWn5LTDYIXmwFE7VYXaP4>)
+ - [ES04 - Gestione delle sessioni nelle applicazioni web](<https://docs.gosogle.com/presentation/d/1LTdLkmBd0KBnZE7xzD7ZFkRWn5LTDYIXmwFE7VYXaP4>)
 
 ### Teoria
- - [Array associativi](<Array associativi.md>)
+4. **Persistenza dei dati**
  - [04.1 Persistenza dei dati](<04.1 Persistenza dei dati.md>)
  - [04.2 Sessioni in PHP](<04.2 Sessioni in PHP.md>)
  - [04.3 Gestione dello stato dell'utente](<04.3 Gestione dello stato dell'utente.md>) 
@@ -14,6 +14,13 @@
  - [04.7 Database come storage persistente](<04.7 Database come storage persistente.md>) 
  - [04.8 Esempi pratici](<04.8 Esempi pratici.md>)
  - [04.9 Best practice per la persistenza dei dati](<04.9 Best practice per la persistenza dei dati.md>)
+
+7. **Gestione di array e collezioni di dati**
+   - [Array associativi](<Array associativi.md>)
+   - 7.1 Array: tipi, inizializzazione e manipolazione
+   - 7.2 Iterazioni avanzate e metodi di accesso
+   - 7.3 Array multi-dimensionali
+   - 7.4 Collezioni e strutture dati
 
 ---
 [INDICE](../README.md)
