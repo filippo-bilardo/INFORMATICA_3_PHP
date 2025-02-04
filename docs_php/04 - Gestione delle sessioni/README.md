@@ -16,11 +16,11 @@
  - [04.9 Best practice per la persistenza dei dati](<04.9 Best practice per la persistenza dei dati.md>)
 
 7. **Gestione di array e collezioni di dati**
-   - [Array associativi](<Array associativi.md>)
-   - 7.1 Array: tipi, inizializzazione e manipolazione
-   - 7.2 Iterazioni avanzate e metodi di accesso
-   - 7.3 Array multi-dimensionali
-   - 7.4 Collezioni e strutture dati
+ - [Array associativi](<Array associativi.md>)
+ - Array: tipi, inizializzazione e manipolazione
+ - Iterazioni avanzate e metodi di accesso
+ - Array multi-dimensionali
+ - Collezioni e strutture dati
 
 ---
 [INDICE](../README.md)
