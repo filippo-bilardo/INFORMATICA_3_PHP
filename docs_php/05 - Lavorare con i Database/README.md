@@ -15,23 +15,22 @@
    - Errori fatali e gestione di errori personalizzati.
    - Gestione avanzata degli errori
    - Error handling e debugging avanzato
-   
-2. **Connessione al database**
+
+2. **Lavorare con i database**
    - [02.1 Metodi a Confronto per la Connessione al Database](<02.1 Metodi a Confronto per la Connessione al Database.md>)
-   - [02.2 Connessione al database con MySQLi](<02.2 Connessione al database con MySQLi.md>)
-   - [02.3 Connessione al DB](<02.3 Connessione al DB.md>)
-   - [02.4 Esecuzione di query DDL](<02.4 Esecuzione di query DDL.md>)
-   - [02.5 Esecuzione di query DML](<02.5 Esecuzione di query DML.md>)
-   - [02.6 Operazioni CRUD](<02.6 Operazioni CRUD.md>)
-   - [02.7 Ottenimento dei risultati](<02.7 Ottenimento dei risultati.md>)
-   - [02.8 Query parametrizzate e prevenzione SQL Injection](<02.8 Query parametrizzate e prevenzione SQL Injection.md>)
-   - [02.9 Gestione di transazioni](<02.9 Gestione di transazioni.md>)
-   - [02.10 Riepilogo metodi mysqli](<02.10 Riepilogo metodi mysqli.md>)
-   - [02.11 Quiz di auto valutazione](<02.11 Quiz di auto valutazione.md>)
-   - [02.12 Esercitazioni pratiche](<02.12 Esercitazioni pratiche.md>)
-   - [02.13 Tipi di database supportati da PHP](<02.13 Tipi di database supportati da PHP.md>)
-   - [02.14 Interfaccia MySQLi ad oggetti](<02.14 Interfaccia MySQLi ad oggetti.md>)
-   - [02.15 Interfaccia PDO](<02.15 Interfaccia PDO.md>)
+   - [02.2 Connessione al DB](<02.2 Connessione al DB.md>)
+   - [02.3 Esecuzione di query DDL](<02.3 Esecuzione di query DDL.md>)
+   - [02.4 Esecuzione di query DML](<02.4 Esecuzione di query DML.md>)
+   - [02.5 Operazioni CRUD](<02.5 Operazioni CRUD.md>)
+   - [02.6 Ottenimento dei risultati](<02.6 Ottenimento dei risultati.md>)
+   - [02.7 Query parametrizzate e prevenzione SQL Injection](<02.7 Query parametrizzate e prevenzione SQL Injection.md>)
+   - [02.8 Gestione di transazioni](<02.8 Gestione di transazioni.md>)
+   - [02.9 Riepilogo metodi mysqli](<02.9 Riepilogo metodi mysqli.md>)
+   - [02.10 Quiz di auto valutazione](<02.10 Quiz di auto valutazione.md>)
+   - [02.11 Esercitazioni pratiche](<02.11 Esercitazioni pratiche.md>)
+   - [02.12 Tipi di database supportati da PHP](<02.12 Tipi di database supportati da PHP.md>)
+   - [02.13 Interfaccia MySQLi ad oggetti](<02.13 Interfaccia MySQLi ad oggetti.md>)
+   - [02.14 Interfaccia PDO](<02.14 Interfaccia PDO.md>)
 
 ---
 [INDICE](../README.md)
