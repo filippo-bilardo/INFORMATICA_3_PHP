@@ -1,4 +1,5 @@
 ## 5. **Lavorare con i Database**
+
 ---
 ### Esercitazioni
 - [ES05 - Login con PHP e MySql](<https://docs.google.com/presentation/d/1tXEsuEtcawqlxX1wcktWsgjuNFoiaFXEQ-eKfgrebU4>)
@@ -14,6 +15,7 @@
    - Errori fatali e gestione di errori personalizzati.
    - Gestione avanzata degli errori
    - Error handling e debugging avanzato
+   
 2. **Connessione al database**
    - [02.1 Metodi a Confronto per la Connessione al Database](<02.1 Metodi a Confronto per la Connessione al Database.md>)
    - [02.2 Connessione al database con MySQLi](<02.2 Connessione al database con MySQLi.md>)
