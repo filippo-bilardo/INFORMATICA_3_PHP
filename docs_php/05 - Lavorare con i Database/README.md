@@ -26,7 +26,7 @@
    - [02.7 Query parametrizzate e prevenzione SQL Injection](<02.7 Query parametrizzate e prevenzione SQL Injection.md>)
    - [02.8 Gestione di transazioni](<02.8 Gestione di transazioni.md>)
    - [02.9 Riepilogo metodi mysqli](<02.9 Riepilogo metodi mysqli.md>)
-   - [02.10 Quiz di auto valutazione](<02.10 Quiz di auto valutazione.md>)
+   - [02.10 Quiz di autovalutazione](<02.10 Quiz di autovalutazione.md>)
    - [02.11 Esercitazioni pratiche](<02.11 Esercitazioni pratiche.md>)
    - [02.12 Tipi di database supportati da PHP](<02.12 Tipi di database supportati da PHP.md>)
    - [02.13 Interfaccia MySQLi ad oggetti](<02.13 Interfaccia MySQLi ad oggetti.md>)
