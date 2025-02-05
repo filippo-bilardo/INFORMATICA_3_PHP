@@ -1,7 +1,10 @@
-## 5. **Connessione al Database**
-
+## 5. **Lavorare con i Database**
 ---
 ### Esercitazioni
+- [ES05 - Login con PHP e MySql](<https://docs.google.com/presentation/d/1tXEsuEtcawqlxX1wcktWsgjuNFoiaFXEQ-eKfgrebU4>)
+- ES06 - Registrazione nuovo utente e inserimento dati nel DB
+- ES07 - Web app PHP per la gestione dell'account
+- ES08 - Web app PHP per la visualizzazione e gestione dei dati presenti nel DB
 
 --- 
 ### Teoria
@@ -24,9 +27,9 @@
    - [02.10 Riepilogo metodi mysqli](<02.10 Riepilogo metodi mysqli.md>)
    - [02.11 Quiz di auto valutazione](<02.11 Quiz di auto valutazione.md>)
    - [02.12 Esercitazioni pratiche](<02.12 Esercitazioni pratiche.md>)
-   - [Tipi di database supportati da PHP](<Tipi di database supportati da PHP.md>)
-   - [Interfaccia MySQLi ad oggetti](<Interfaccia MySQLi ad oggetti.md>)
-   - [Interfaccia PDO](<Interfaccia PDO.md>)
+   - [02.13 Tipi di database supportati da PHP](<02.13 Tipi di database supportati da PHP.md>)
+   - [02.14 Interfaccia MySQLi ad oggetti](<02.14 Interfaccia MySQLi ad oggetti.md>)
+   - [02.15 Interfaccia PDO](<02.15 Interfaccia PDO.md>)
 
 ---
 [INDICE](../README.md)
@@ -36,21 +39,16 @@
    - Installazione e configurazione del server MySQL/MariaDB
    - Configurazione del server web (Apache/Nginx)
    - Estensioni necessarie in PHP (mysqli, pdo_mysql)
-
 ## **5. Best Practice per la Sicurezza**
    - Utilizzo di credenziali sicure
    - Evitare il hard-coding delle password
    - Uso di variabili d'ambiente o file di configurazione
-   - Protezione contro attacchi di SQL Injection
-
 ## **8. Ottimizzazione delle Prestazioni**
    - Uso efficiente delle risorse
    - Chiusura della connessione
    - Cache dei risultati delle query
-
 ## **9. Gestione degli Errori**
    - Log degli errori
-
 ## **10. Progetti Practici**
    - Creazione di una semplice applicazione CRUD (Create, Read, Update, Delete)
-   - Integrazione di una connessione al database in un framework PHP
+
