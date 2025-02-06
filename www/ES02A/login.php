@@ -9,9 +9,9 @@ echo "Username: $username<br />";
 echo "Password: $passwd<br />";
 
 if($username=="Mario" && $passwd=="123") {
-  $msg = "Attenzione credenziali non corrette";
-} else {
   $msg = "Benvenuto $username nella pagina riservata del sito!";
+} else {
+  $msg = "Attenzione credenziali non corrette";
 }
 ?>
 <!DOCTYPE html>

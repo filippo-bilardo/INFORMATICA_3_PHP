@@ -10,11 +10,18 @@
 --- 
 ### Teoria
 1. **Gestione delle eccezioni**
-   - Introduzione alle eccezioni
-   - Creazione di eccezioni personalizzate
+   - [01.1 Introduzione alle eccezioni](<01.1 Introduzione alle eccezioni.md>)
+   - [01.2 Blocchi Try-Catch](<01.2 Blocchi Try-Catch.md>)
+   - [01.3 Lanciare Eccezioni](<01.3 Lanciare Eccezioni.md>)
+   - [01.4 La Clausola Finally](<01.4 La Clausola Finally.md>)
+   - [01.5 Classi di Eccezione Predefinite](<01.5 Classi di Eccezione Predefinite.md>)
+   - [01.6 Creazione di Eccezioni Personalizzate](<01.6 Creazione di Eccezioni Personalizzate.md>)
+   - [01.7 Gestione degli Errori Legacy](<01.7 Gestione degli Errori Legacy.md>)
+   - [01.8 Logging e Debugging delle Eccezioni](<01.8 Logging e Debugging delle Eccezioni.md>)
    - Errori fatali e gestione di errori personalizzati.
    - Gestione avanzata degli errori
    - Error handling e debugging avanzato
+   - Differenze con i linguaggi Java, C++ e JavaScript
 
 2. **Lavorare con i database**
    - [02.1 Metodi a Confronto per la Connessione al Database](<02.1 Metodi a Confronto per la Connessione al Database.md>)
@@ -34,6 +41,40 @@
 
 ---
 [INDICE](../README.md)
+
+---
+
+### **8. Logging e Debugging delle Eccezioni**
+   - 8.1 Registrazione delle eccezioni in file di log
+   - 8.2 Uso di librerie di logging (es. Monolog)
+   - 8.3 Tecniche di debugging per identificare la causa delle eccezioni
+   - 8.4 Visualizzazione sicura delle eccezioni in ambiente di produzione
+
+---
+
+### **9. Gestione delle Eccezioni nei Database**
+   - 9.1 Gestione delle eccezioni con MySQLi e PDO
+   - 9.2 Cattura di errori di connessione al database
+   - 9.3 Gestione di query fallite o dati corrotti
+   - 9.4 Esempi pratici di gestione delle eccezioni in transazioni
+
+---
+
+### **10. Best Practice per la Gestione delle Eccezioni**
+   - 10.1 Non ignorare le eccezioni
+   - 10.2 Evitare l'uso eccessivo di `try-catch`
+   - 10.3 Separare la logica di business dalla gestione delle eccezioni
+   - 10.4 Documentazione delle eccezioni nei commenti del codice
+
+### **11. Quiz di Autovalutazione**
+   - Domande a risposta multipla per verificare la comprensione delle eccezioni
+   - Soluzioni con spiegazioni dettagliate
+
+   - 12.1 Implementazione di blocchi `try-catch` in uno script PHP
+   - 12.2 Creazione di una classe di eccezione personalizzata
+   - 12.3 Gestione delle eccezioni in un'applicazione web
+   - 12.4 Simulazione di errori e debug con logging
+   - 13.2 Importanza della gestione delle eccezioni nella programmazione moderna
 
 ---
 ## **2. Prerequisiti per la Connessione**

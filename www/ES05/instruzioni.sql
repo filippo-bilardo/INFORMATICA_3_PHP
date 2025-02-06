@@ -1,7 +1,6 @@
 -- Connessione al container MariaDB
 -- docker exec -it lamp_mariadb bash -l
 -- mysql -u root -p
--- mysql -u lamp -p
 -- Connessione al server Codespace
 -- mysql -u root -p
 
@@ -10,6 +9,8 @@ CREATE DATABASE IF NOT EXISTS ES05;
 USE ES05;
 SHOW DATABASES;
 
+-- Quando il db si trova sulla stessa macchina del server web
+-- Ad esempio se server web e db sono entrambi sul server Codespace
 DROP USER IF EXISTS ES05_user@localhost;
 CREATE USER IF NOT EXISTS ES05_user@localhost IDENTIFIED BY 'mia_password';
 ALTER USER ES05_user@localhost IDENTIFIED BY 'nuova_password';
@@ -18,14 +19,15 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ES05.* TO ES05_user@localhost;
 GRANT ALL ON ES05.* TO ES05_user@localhost;
 SHOW GRANTS FOR ES05_user@localhost;
 
--- Query testate con successo
+-- Qunado il db si trova su un'altra macchina rispetto al server web
+-- Ad esempio se il db si trova sul container MariaDB
 DROP USER IF EXISTS ES05_user@172.23.0.2;
 CREATE USER IF NOT EXISTS ES05_user@172.23.0.2 IDENTIFIED BY 'nuova_password'; 
 GRANT SELECT, INSERT, UPDATE, DELETE ON ES05.* TO ES05_user@172.23.0.2;
 SELECT user, host FROM mysql.user;
 SHOW GRANTS FOR ES05_user@172.23.0.2;
 
--- Query testate con successo, % = tutti gli host
+-- Quando accettiamo connessioni da qualsiasi host 
 DROP USER IF EXISTS ES05_user@'%';
 CREATE USER IF NOT EXISTS ES05_user@'%' IDENTIFIED BY 'nuova_password'; 
 GRANT SELECT, INSERT, UPDATE, DELETE ON ES05.* TO ES05_user@'%';
