@@ -1,3 +1,5 @@
+-- https://www.planttext.com/?text=SoWkIImgAStDuUNYvKhDAyaigLH8pYmfERn0ePgNIq51EpF5Ii7JBmJ4rjLLoClFJRLI27CCSlPm3D8mDT3avQf5qbcGMbISdvTAh5QmU6PAFCH2g6AmUL0drDJewkPNmusrKb0goonBLSZCKm8fSaZDIm6x7000#
+
 -- Creazione del database
 CREATE DATABASE IF NOT EXISTS esempio_database;
 USE esempio_database;
