@@ -17,6 +17,7 @@
 
 7. **Gestione di array e collezioni di dati**
  - [Array associativi](<Array associativi.md>)
+ - [Destrutturazione di array](<Destrutturazione di array.md>)
  - Array: tipi, inizializzazione e manipolazione
  - Iterazioni avanzate e metodi di accesso
  - Array multi-dimensionali
