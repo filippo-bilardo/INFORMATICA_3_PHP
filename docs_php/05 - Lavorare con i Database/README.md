@@ -22,6 +22,14 @@
    - Gestione avanzata degli errori
    - Error handling e debugging avanzato
    - Differenze con i linguaggi Java, C++ e JavaScript
+   - Quiz di autovalutazione
+
+
+   - 12.2 Creazione di una classe di eccezione personalizzata
+   - 12.3 Gestione delle eccezioni in un'applicazione web
+   - 12.4 Simulazione di errori e debug con logging
+   - 13.2 Importanza della gestione delle eccezioni nella programmazione moderna
+
 
 2. **Lavorare con i database**
    - [02.1 Metodi a Confronto per la Connessione al Database](<02.1 Metodi a Confronto per la Connessione al Database.md>)
@@ -39,16 +47,14 @@
    - [02.13 Interfaccia MySQLi ad oggetti](<02.13 Interfaccia MySQLi ad oggetti.md>)
    - [02.14 Interfaccia PDO](<02.14 Interfaccia PDO.md>)
 
+3. **Logging e Debugging delle Eccezioni**
+   - 03.1 Registrazione delle eccezioni in file di log
+   - 03.2 Uso di librerie di logging (es. Monolog)
+   - 03.3 Tecniche di debugging per identificare la causa delle eccezioni
+   - 03.4 Visualizzazione sicura delle eccezioni in ambiente di produzione
+
 ---
 [INDICE](../README.md)
-
----
-
-### **8. Logging e Debugging delle Eccezioni**
-   - 8.1 Registrazione delle eccezioni in file di log
-   - 8.2 Uso di librerie di logging (es. Monolog)
-   - 8.3 Tecniche di debugging per identificare la causa delle eccezioni
-   - 8.4 Visualizzazione sicura delle eccezioni in ambiente di produzione
 
 ---
 
@@ -57,26 +63,11 @@
    - 9.2 Cattura di errori di connessione al database
    - 9.3 Gestione di query fallite o dati corrotti
    - 9.4 Esempi pratici di gestione delle eccezioni in transazioni
-
----
-
 ### **10. Best Practice per la Gestione delle Eccezioni**
    - 10.1 Non ignorare le eccezioni
    - 10.2 Evitare l'uso eccessivo di `try-catch`
    - 10.3 Separare la logica di business dalla gestione delle eccezioni
    - 10.4 Documentazione delle eccezioni nei commenti del codice
-
-### **11. Quiz di Autovalutazione**
-   - Domande a risposta multipla per verificare la comprensione delle eccezioni
-   - Soluzioni con spiegazioni dettagliate
-
-   - 12.1 Implementazione di blocchi `try-catch` in uno script PHP
-   - 12.2 Creazione di una classe di eccezione personalizzata
-   - 12.3 Gestione delle eccezioni in un'applicazione web
-   - 12.4 Simulazione di errori e debug con logging
-   - 13.2 Importanza della gestione delle eccezioni nella programmazione moderna
-
----
 ## **2. Prerequisiti per la Connessione**
    - Installazione e configurazione del server MySQL/MariaDB
    - Configurazione del server web (Apache/Nginx)
@@ -89,8 +80,4 @@
    - Uso efficiente delle risorse
    - Chiusura della connessione
    - Cache dei risultati delle query
-## **9. Gestione degli Errori**
-   - Log degli errori
-## **10. Progetti Practici**
-   - Creazione di una semplice applicazione CRUD (Create, Read, Update, Delete)
 

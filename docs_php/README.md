@@ -1,4 +1,5 @@
 ## Guida completa a PHP 8
+- [202225 - Guida PHP](<https://docs.google.com/presentation/d/1IHGWgXou4idcMSU2-G07_iZLbQv5nE5zpeC7gViaLqk>)
 - [01 - Introduzione](<01 - Introduzione/README.md>)
 - [02 - Le basi di PHP](<02 - Le basi di PHP/README.md>)
 - [03 - Validazione dei dati](<03 - Validazione dei dati/README.md>)
