@@ -53,6 +53,9 @@
    - 03.3 Tecniche di debugging per identificare la causa delle eccezioni
    - 03.4 Visualizzazione sicura delle eccezioni in ambiente di produzione
 
+4. ** Invio email**
+   - [04.1 Invio email con PHPMailer](<04.1 Invio email con PHPMailer.md>)
+   - [04.2 Invio email con funzione mail di PHP](<04.2 Invio email con funzione mail di PHP.md>)
 ---
 [INDICE](../README.md)
 
