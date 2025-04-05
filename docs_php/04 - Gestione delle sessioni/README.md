@@ -15,13 +15,13 @@
  - [04.8 Esempi pratici](<04.8 Esempi pratici.md>)
  - [04.9 Best practice per la persistenza dei dati](<04.9 Best practice per la persistenza dei dati.md>)
 
-7. **Gestione di array e collezioni di dati**
+5. **Gestione di array e collezioni di dati**
  - [Array associativi](<Array associativi.md>)
  - [Destrutturazione di array](<Destrutturazione di array.md>)
- - Array: tipi, inizializzazione e manipolazione
- - Iterazioni avanzate e metodi di accesso
- - Array multi-dimensionali
- - Collezioni e strutture dati
+ - [Array: tipi, inizializzazione e manipolazione](<Array tipi inizializzazione e manipolazione.md>)
+ - [Iterazioni avanzate e metodi di accesso](<Iterazioni avanzate e metodi di accesso.md>)
+ - [Array multi-dimensionali](<Array multi-dimensionali.md>)
+ - [Collezioni e strutture dati](<Collezioni e strutture dati.md>)
 
 ---
 [INDICE](../README.md)
